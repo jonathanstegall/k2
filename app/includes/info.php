@@ -639,7 +639,7 @@ function k2_body_class( $print = true ) {
 	if ( empty($locale) ) {
 		$locale = 'en';
 	} else {
-		$lang_array = split('_', $locale);
+		$lang_array = preg_split('_', $locale);
 		$locale = $lang_array[0];
 	}
 	$c[] = 'lang-' . $locale;
